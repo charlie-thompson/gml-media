@@ -34,3 +34,41 @@ def card(quote,speaker,out):
     im.save(out,quality=95)
 if __name__=="__main__":
     for i,(q,s,o) in enumerate(json.load(open(sys.argv[1]))): card(q,s,o)
+
+def cover(title, out):
+    """Carousel cover slide: big hook title."""
+    im=Image.new("RGB",(W,H),BG);d=ImageDraw.Draw(im)
+    d.rectangle([0,0,W,14],fill=GOLD)
+    maxw=W-160
+    for size in range(110,50,-4):
+        f=ImageFont.truetype(F+"InterDisplay-Black.otf",size)
+        lines=wrap(d,title.upper(),f,maxw);lh=int(size*1.12)
+        if lh*len(lines)<=700: break
+    y=260+(700-lh*len(lines))//2
+    for i,l in enumerate(lines):
+        d.text((80,y),l,font=f,fill=GOLD if i==len(lines)-1 else WHITE);y+=lh
+    sf=ImageFont.truetype(F+"InterDisplay-SemiBold.otf",38)
+    d.text((80,H-260),"SWIPE →",font=sf,fill=(170,170,170))
+    im.paste(logo,(80,H-90-logo.height),logo)
+    im.save(out,quality=95)
+
+def end_slide(out):
+    """Carousel closing slide: call to action."""
+    im=Image.new("RGB",(W,H),BG);d=ImageDraw.Draw(im)
+    d.rectangle([0,0,W,14],fill=GOLD)
+    f=ImageFont.truetype(F+"InterDisplay-Black.otf",88)
+    y=420
+    for l,c in (("FULL EPISODES",WHITE),("EVERY WEEKDAY",GOLD)):
+        d.text((80,y),l,font=f,fill=c);y+=110
+    sf=ImageFont.truetype(F+"InterDisplay-Medium.otf",44)
+    d.text((80,y+40),"Follow @GoodMorningLiberty",font=sf,fill=(200,200,200))
+    im.paste(logo,(80,H-90-logo.height),logo)
+    im.save(out,quality=95)
+
+def carousel(title, quotes, out_prefix):
+    """quotes: list of (quote, speaker). Writes cover, quote slides, end slide. Returns paths in order."""
+    paths=[f"{out_prefix}_0.jpg"];cover(title,paths[0])
+    for i,(q,s) in enumerate(quotes,1):
+        p=f"{out_prefix}_{i}.jpg";card(q,s,p);paths.append(p)
+    p=f"{out_prefix}_{len(quotes)+1}.jpg";end_slide(p);paths.append(p)
+    return paths
