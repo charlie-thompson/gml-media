@@ -16,6 +16,11 @@ Each night, schedule the NEXT day's Good Morning Liberty posts on Facebook, Inst
 
 ## Steps
 1. Check Metricool `getScheduledPosts` for tomorrow. If tomorrow already has posts, only fill missing slots.
+1b. Fresh episodes first. List OpusClip projects (`opusclip_list_projects`) and find any created since the last run that are new GML episodes (OpusClip Auto Import creates these from new YouTube uploads). For each new episode:
+   - Use its best clips (score >= 85, host's own take, not replaying someone else's clip) for at least half of tomorrow's clip slots. Fresh content beats the archive.
+   - Pull its transcript with `opusclip_get_transcript` and pick 2 to 3 sharp host one-liners for quote cards and text posts. Same rules as the bank: verbatim, under 25 words, makes sense with no context, no Context risk.
+   - Append the new moments to the Content Bank sheet as new rows (Status "Scheduled" for the ones used, "New" for the rest), so later runs can use them.
+   - Record the project id in `state/processed_episodes.txt`.
 2. Clips, in this order of preference:
    a. Unused clips already in OpusClip with score >= 85 (`opusclip_list_projects`, `opusclip_list_clips`), skipping anything in `state/used_clips.txt` or `state/skip_clips.txt`. Skip clips that are mostly someone else's audio, about shootings, sexual assault, or unverified accusations against private people.
    b. Otherwise cut new ones from the content bank: take the top rows with Status "New", "video_clip" in Formats and an empty Context risk. Submit with `opusclip_submit_project` (videoUrl = the YouTube watch URL, rangeStart = start seconds minus 10, rangeEnd = end seconds plus 10, clipDurationsSec [[20,90]], removeFiller true, customPrompt "Make one clip of the host's complete take in this range. Start on the hook, end on a complete thought."). Poll `opusclip_list_clips` until COMPLETE and take the best clip whose title matches the moment.
