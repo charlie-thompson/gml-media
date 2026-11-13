@@ -1,0 +1,17 @@
+# Clip queue: eligible OpusClip clips waiting to be posted. One row per clip.
+# projectId	clipId	score	durSec	kind	useBy	checked	notes
+# kind: timely (use within 3 days of the episode) or evergreen (good for ~6 weeks).
+# checked: yes = transcript reviewed (host's own take, clean); no = run must read the transcript before using it.
+P3111210T9Ld	L7iqd6drnp	98	91	evergreen	2026-12-24	yes	lobbying turns CMS rules into $100M; over 90s so IG/TikTok only
+P3111210T9Ld	HO2vLtqTtQ	94	77	timely	2026-11-15	yes	why isn't RFK Jr on Rogan explaining MAHA; mild language ("balls")
+P3111210T9Ld	hCDR26OKbu	90	83	evergreen	2026-12-24	yes	everyone says Congress is corrupt, but not my rep
+P3111210TKRX	FFBuR45MQs	90	40	evergreen	2026-12-24	yes	Barbary Wars: Jefferson asked Congress for authorization
+P3111210T9Ld	6luNYVE9ia	90	49	evergreen	2026-12-24	no	glyphosate ban and farm yields; confirm it is the hosts, not Calley Means
+P3111210T9Ld	96UVxbdUEH	89	71	evergreen	2026-12-24	no	FDA regulation stakes; check overlap with L7iqd6drnp
+P3111210T16m	q43SzVb0eE	89	13	timely	2026-11-15	no	is an unauthorized war impeachable
+P3111210TKRX	oGx5KGkJgh	88	27	timely	2026-11-15	no	Massie bank robbery analogy; check for profanity (same segment as QnXlkUh2BB)
+P3111210T9Ld	WiuqmzC7qx	87	20	evergreen	2026-12-24	no	find the root cause before fixing the problem
+P3111210T16m	QNXnP7gaQW	87	31	evergreen	2026-12-24	no	War Powers Resolution is not a 60-day blank check
+P3111210TKRX	vPewo4eO9x	86	36	evergreen	2026-12-24	no	honor veterans by stopping unnecessary wars (short version of tIJpQl9Rkt)
+P3111210T9Ld	aZLYKl079O	85	65	evergreen	2026-12-24	no	government monopolies vs AT&T
+P3111210TKRX	Yp6XgT0abZ	85	64	timely	2026-11-16	no	American Liberty Party pressure on Republicans

@@ -5,25 +5,36 @@ Each night, schedule the NEXT day's Good Morning Liberty posts on Facebook, Inst
 ## Accounts and IDs
 - Metricool brand (blogId): `6570605`, timezone `America/Chicago`.
 - Content bank: Claude Sheet `08f13b1f-218a-4f0e-971c-7d1cb919b4ff` (https://claude.ai/artifact/273eNjPq432bjzHmsrhLHc), sheet "Content Bank", ranked best-first. Read and write it through the Claude Docs connector (load its `guide` with `topic.sheets` first). Columns: A Rank, B Score, C Hook quote, D Speaker, E Topics, F Formats, G Clip link (YouTube with ?t=), H Start, I End, J Caption, K Episode, L Aired, M Evergreen, N Punch, O Context risk, P Status (New / Approved / Scheduled / Posted / Skip).
-- OpusClip: connector tools `opusclip_*`. Do NOT pass brandTemplateId; the account's default GML brand kit applies automatically.
+- OpusClip: connector tools `opusclip_*`. Do NOT pass brandTemplateId; the account's GML brand kit (9:16 layout: Split and Fit) applies automatically.
 - This repo (public): images go in `cards/`, served at `https://raw.githubusercontent.com/charlie-thompson/gml-media/main/<path>`.
 
 ## Daily mix (times America/Chicago, for tomorrow)
-- Facebook (8): 07:00 clip (REEL), 09:00 quote card (POST), 11:00 text post, 13:00 clip, 15:00 card, 17:00 text, 19:00 clip, 21:00 card.
-- Instagram (4): 09:30 carousel (POST with 5 to 6 images), 12:00 clip (REEL), 15:00 slideshow Reel of that day's carousel with music (REEL), 18:00 clip (REEL).
-- TikTok (3): 08:00 clip, 13:30 clip, 20:00 clip. TikTok requires `tiktokData.title` (short hook, under 90 chars) and `privacyOption: PUBLIC_TO_EVERYONE`.
+- Facebook (9): 07:00 clip (REEL), 09:00 quote card (POST), 11:00 text post, 13:00 clip, 15:00 card, 16:00 clip, 17:00 text, 19:00 clip, 21:00 card. Facebook Reels must be 90 seconds or shorter: never put a longer clip on Facebook.
+- Instagram (5): 09:30 carousel (POST with 5 to 6 images), 12:00 clip (REEL), 15:00 slideshow Reel of that day's carousel with music (REEL), 18:00 clip (REEL), 20:30 clip (REEL).
+- TikTok (6): 08:00, 10:30, 13:30, 16:00, 18:00 and 20:00 clips. TikTok requires `tiktokData.title` (short hook, under 90 chars) and `privacyOption: PUBLIC_TO_EVERYONE`.
 - Stories (Facebook and Instagram only; TikTok's API does not support Stories): for every Facebook post that has media (clips and quote cards, not text posts), schedule a Facebook STORY 5 minutes later with the same media. For Instagram, schedule a STORY 5 minutes after the carousel (use slide 1, the first quote, not the cover), after each clip Reel, and after the slideshow Reel. Stories carry no text: omit `text` and set `facebookData.type: "STORY"` or `instagramData.type: "STORY"`. Post every clip as a Story regardless of length (the platform cuts it off at 60 seconds, which is fine). Do not trim or edit clips for Stories. Reuse the static.metricool.com media URL Metricool returned for the main post.
-- About 3 to 4 distinct clips per day, reused across the three networks. Never post the same clip on the same network twice within 30 days.
+- About 6 to 9 distinct clips per day (13 clip slots), reused across the three networks but never twice on the same network in a day. Never post the same clip on the same network twice within 30 days. Spread each clip's networks across the day (for example FB 13:00, TikTok 10:30) rather than stacking them in the same hour.
+
+## Clip queue and quality bar
+Opus makes 25 to 35 clips per episode, far more than we post. Do not post everything; keep a queue in `state/clip_queue.tsv` and post the best of it.
+- Eligible clips: score >= 85, the hosts' own take, clean (no profanity, no replayed audio of someone else such as a news clip, a guest interview, a Rogan or other podcast clip, or a politician's speech; reading a tweet or headline aloud is fine), no shootings, sexual assault, Epstein, unverified accusations against people, nothing mentioning Seald. Read every clip's transcript with `opusclip_describe_clip` before using or queueing it as checked; titles and descriptions are not enough.
+- Tiers: score >= 90 fills slots first. 85 to 89 is backfill, used only when no 90+ clip fits a slot. Below 85 never posts.
+- Favorites: clips Charlie hearted in OpusClip (`opusclip_list_clips` with `favorited: true`) jump to the front of the queue regardless of score.
+- Duplicates: Opus often cuts the same moment twice (a short cut inside a long one). Keep the higher-scored one and add the other to `state/skip_clips.txt`.
+- Timely vs evergreen: clips tied to this week's news (a vote, a hearing, a named news event) are "timely" and must post within 3 days of the episode or be dropped. Policy and principle clips (regulation, taxes, incentives, war powers in general) are "evergreen" and stay usable for about 6 weeks. Each night, fill slots with timely clips first, then the best evergreen ones.
+- Length: clips over 90 seconds can go to Instagram and TikTok only.
+- Layout: the run cannot see video layout. Opus's brand kit is set to Split and Fit for 9:16 (Fill removed) so clips should not crop to one host. If Charlie flags a clip's layout, add it to `state/skip_clips.txt`.
+- Each night, after reviewing new episodes, append every eligible clip not used tomorrow to the queue (with kind, useBy and checked) and remove rows that were used or have passed their useBy date.
 
 ## Steps
 1. Check Metricool `getScheduledPosts` for tomorrow. If tomorrow already has posts, only fill missing slots.
 1b. Fresh episodes first. List OpusClip projects (`opusclip_list_projects`) and find any created since the last run that are new GML episodes (OpusClip Auto Import creates these from new YouTube uploads). For each new episode:
-   - Use its best clips (score >= 85, host's own take, not replaying someone else's clip) for at least half of tomorrow's clip slots. Fresh content beats the archive.
+   - Review all of its clips against the queue rules above. Use its best eligible clips for at least half of tomorrow's clip slots (fresh content beats the archive) and queue the rest.
    - Pull its transcript with `opusclip_get_transcript` and pick 2 to 3 sharp host one-liners for quote cards and text posts. Same rules as the bank: verbatim, under 25 words, makes sense with no context, no Context risk.
    - Append the new moments to the Content Bank sheet as new rows (Status "Scheduled" for the ones used, "New" for the rest), so later runs can use them.
    - Record the project id in `state/processed_episodes.txt`.
 2. Clips, in this order of preference:
-   a. Unused clips already in OpusClip with score >= 85 (`opusclip_list_projects`, `opusclip_list_clips`), skipping anything in `state/used_clips.txt` or `state/skip_clips.txt`. Skip clips that are mostly someone else's audio, about shootings, sexual assault, or unverified accusations against private people.
+   a. Fresh-episode clips and the queue (`state/clip_queue.tsv`), following "Clip queue and quality bar": favorites, then timely 90+, then evergreen 90+, then 85 to 89. Skip anything in `state/used_clips.txt` or `state/skip_clips.txt`. Rows with checked "no" need a transcript read first.
    b. Otherwise cut new ones from the content bank: take the top rows with Status "New", "video_clip" in Formats and an empty Context risk. Submit with `opusclip_submit_project` (videoUrl = the YouTube watch URL, rangeStart = start seconds minus 10, rangeEnd = end seconds plus 10, clipDurationsSec [[20,90]], removeFiller true, customPrompt "Make one clip of the host's complete take in this range. Start on the hook, end on a complete thought."). Poll `opusclip_list_clips` until COMPLETE and take the best clip whose title matches the moment.
    c. Get the HD URL with `opusclip_export_clip` (poll while "rendering"). Pass that URL straight into Metricool `media`; Metricool copies it to its own storage at scheduling time, so the signed URL expiring later is fine.
 3. Quote cards: take the next "New" rows with "quote_card" in Formats, empty Context risk, no "..." in the quote and 24 words or fewer. Render with `python3 tools/card.py` (function `card(quote, speaker, out_path)`; speaker shows only for "Chuck", "Nate" or "Josh", never "unclear"). Save as `cards/card_<rank>.jpg`, commit and push to main, then confirm the raw URL returns 200 before scheduling.
@@ -33,8 +44,10 @@ Each night, schedule the NEXT day's Good Morning Liberty posts on Facebook, Inst
    Audio: never add music to talking clips. Music goes only on the daily slideshow Reel (Instagram does not allow music on photo or carousel posts through the API, so the slideshow Reel is how picture content gets audio).
 3c. Slideshow Reel with music (Instagram, 15:00): render the day's carousel slides into a video with `python3 tools/slideshow.py cards/slideshow_<YYYYMMDD>.mp4 <slides in order>` (3 seconds per slide, 1080x1920), push it, confirm the raw URL returns 200, and schedule it as an Instagram REEL with the same caption and hashtags as the carousel. Pick a DIFFERENT track every time: pass a mood or genre search term as `instagramData.audioConfiguration.audioId` (rotate terms like upbeat instrumental, lofi hip hop, cinematic epic, funk groove, synthwave, acoustic indie, hip hop beat, rock instrumental, jazz piano, electronic chill). If Metricool rejects it with a list of candidates, choose one numeric id from that list that is not in `state/used_audio.txt` and retry once with it. Use audioVolume 60 and videoVolume 0. Append the id and date to `state/used_audio.txt` and never reuse an id within 60 days. If audio fails twice, schedule the Reel without audio rather than skipping it.
 6. Schedule each post with Metricool `createScheduledPost`, `autoPublish: true`, `draft: false`. Facebook clips use `facebookData.type: "REEL"`, cards and text use "POST". Instagram cards `instagramData.type: "POST"`, clips "REEL".
-7. Bookkeeping: set Status to "Scheduled" in the sheet for every bank row used. Append used clips to `state/used_clips.txt`. Commit and push.
-8. When the bank runs low (fewer than 30 "New" rows with quote_card), say so in the run summary.
+7. Bookkeeping: set Status to "Scheduled" in the sheet for every bank row used. Append used clips to `state/used_clips.txt` and update `state/clip_queue.tsv`. Commit and push.
+8. When the bank runs low (fewer than 30 "New" rows with quote_card), or the clip queue holds fewer than 10 eligible clips, say so in the run summary.
+9. Notify Charlie: after scheduling, send one push notification listing tomorrow's clips (title, networks, times) so he can delete anything in Metricool he doesn't like. Keep it short.
+10. Weekly review (Monday runs only): pull last week's results with Metricool `getAnalyticsDataByMetrics` per network (views, reach, engagement for Reels/TikToks) and compare by time slot, clip length and topic. Put the findings in the Monday notification and, if a pattern is clear for two weeks running, propose (do not make) a change to the daily mix.
 
 ## Rules
 - Never post anything with a Context risk note, anything where the hosts are replaying someone else's clip, or anything mentioning Seald or its investors.
