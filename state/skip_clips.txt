@@ -22,8 +22,6 @@ P3111210T16m S50VwCA88k  # Nate-only layout (Opus Fill), Charlie flagged
 P3111210TKRX 6OfZmhx4Iz  # profanity at Will Chamberlain
 P3111210TKRX QnXlkUh2BB  # contains the same profanity
 P3111210TKRX yRvt7dzzX8  # references the profanity moment
-P3111210TKRX gjzhZuNyjq  # replays Hegseth audio
-P3111210T16m xaKB5BeDjW  # quoting Sen. Kennedy/Theo Von audio
 P3111210T16m BldSur8989  # Kennedy/Theo Von audio
 P3111210T9Ld GlxFbrKorg  # Calley Means' own audio
 P3111210T9Ld qyM0iXTQ0K  # subset of 70QZVaDAqa

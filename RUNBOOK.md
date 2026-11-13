@@ -17,7 +17,7 @@ Each night, schedule the NEXT day's Good Morning Liberty posts on Facebook, Inst
 
 ## Clip queue and quality bar
 Opus makes 25 to 35 clips per episode, far more than we post. Do not post everything; keep a queue in `state/clip_queue.tsv` and post the best of it.
-- Eligible clips: score >= 85, the hosts' own take, clean (no profanity, no replayed audio of someone else such as a news clip, a guest interview, a Rogan or other podcast clip, or a politician's speech; reading a tweet or headline aloud is fine), no shootings, sexual assault, Epstein, unverified accusations against people, nothing mentioning Seald. Read every clip's transcript with `opusclip_describe_clip` before using or queueing it as checked; titles and descriptions are not enough.
+- Eligible clips: score >= 85, the hosts' own take, clean (no profanity; save on-air swearing for the full episode). Playing someone else's audio (a news clip, a Rogan or other podcast clip, a politician's speech) is fine as long as the hosts are in the clip reacting to it; skip clips that are only the other person's audio with no host reaction, no shootings, sexual assault, Epstein, unverified accusations against people, nothing mentioning Seald. Read every clip's transcript with `opusclip_describe_clip` before using or queueing it as checked; titles and descriptions are not enough.
 - Tiers: score >= 90 fills slots first. 85 to 89 is backfill, used only when no 90+ clip fits a slot. Below 85 never posts.
 - Favorites: clips Charlie hearted in OpusClip (`opusclip_list_clips` with `favorited: true`) jump to the front of the queue regardless of score.
 - Duplicates: Opus often cuts the same moment twice (a short cut inside a long one). Keep the higher-scored one and add the other to `state/skip_clips.txt`.
@@ -50,6 +50,6 @@ Opus makes 25 to 35 clips per episode, far more than we post. Do not post everyt
 10. Weekly review (Monday runs only): pull last week's results with Metricool `getAnalyticsDataByMetrics` per network (views, reach, engagement for Reels/TikToks) and compare by time slot, clip length and topic. Put the findings in the Monday notification and, if a pattern is clear for two weeks running, propose (do not make) a change to the daily mix.
 
 ## Rules
-- Never post anything with a Context risk note, anything where the hosts are replaying someone else's clip, or anything mentioning Seald or its investors.
+- Never post anything with a Context risk note, anything that is only someone else's audio with no host reaction, anything with profanity, or anything mentioning Seald or its investors.
 - If a step fails (OpusClip down, Metricool error), schedule what you can, then report what was skipped. Do not retry a failed Metricool call more than once.
 - End each run with a short summary: posts scheduled per network, any gaps, any errors.
