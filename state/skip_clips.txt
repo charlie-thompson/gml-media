@@ -26,3 +26,16 @@ P3111210T16m BldSur8989  # Kennedy/Theo Von audio
 P3111210T9Ld GlxFbrKorg  # Calley Means' own audio
 P3111210T9Ld qyM0iXTQ0K  # subset of 70QZVaDAqa
 P3111210T9Ld JHsvIXSk3l  # subset of L7iqd6drnp
+P3111210T9Ld 6luNYVE9ia  # glyphosate; unsourced cancer claim
+P3111322CNQX 77uaQ48qa6  # Ole Miss video, accusations against private students
+P3111322CNQX E37pS1005U  # Ole Miss video, accusations against private students
+P3111322CNQX ofXAmCG8Nh  # threatening phone call (violence)
+P3111322CNQX Lp07xSeWdZ  # Ole Miss student withdrawal
+P3111322CNQX Hv6krSjx49  # Charlie Kirk joke (shooting)
+P3111322CNQX V2iZbzJzVu  # Charlie Kirk joke (shooting)
+P3111322CNQX iZWL1aymFM  # Charlie Kirk / Everytown (shooting)
+P3111322CNQX 7ShNjyy0mX  # Vance/1932 Germany, Nazi joke
+P3111322CNQX K9upYl2Vli  # Vance/1932 Germany (subset of 7ShNjyy0mX)
+P3111322CNQX O2RLYwDB47  # race and fatherlessness stats; hot-button, mostly others' audio
+P3111322CNQX QAefbk0s8z  # mostly activist's quoted words, little host take
+P3111322CNQX q1JNQDysBf  # "shut the hell up" aimed at a private citizen
