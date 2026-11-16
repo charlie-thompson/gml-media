@@ -52,7 +52,7 @@ Opus makes 25 to 35 clips per episode, far more than we post. Do not post everyt
 
 ## Steps
 0. Work out "tomorrow" in Chicago time, never UTC: `TZ=America/Chicago date -d tomorrow +%F`. The run fires around 9pm Chicago, when UTC is already the next day. (On Nov 15 the run used the UTC date and scheduled Nov 17, leaving Nov 16 empty.) The weekly review also goes by the Chicago weekday.
-1. Check Metricool `getScheduledPosts` for tomorrow. If tomorrow already has posts, only fill missing slots.
+1. Check Metricool `getScheduledPosts` for tomorrow. Anything already scheduled stays exactly as it is: never update, move, re-time or replace an existing post (Charlie or an earlier session may have placed it on purpose). Build tomorrow around it: count existing clips, cards and Nate clips toward the daily mix, skip any slot within 60 minutes of an existing post on the same network, and only add what is missing. The one exception is a caption-less Metricool placeholder (see Nate's clips fallback).
 1b. Fresh episodes first. List OpusClip projects (`opusclip_list_projects`) and find any created since the last run that are new GML episodes (OpusClip Auto Import creates these from new YouTube uploads). For each new episode:
    - Review all of its clips against the queue rules above. Use its best eligible clips for at least half of tomorrow's clip slots (fresh content beats the archive) and queue the rest.
    - Pull its transcript with `opusclip_get_transcript` and pick 2 to 3 sharp host one-liners for quote cards and text posts. Same rules as the bank: verbatim, under 25 words, makes sense with no context, no Context risk.
@@ -87,6 +87,7 @@ Opus makes 25 to 35 clips per episode, far more than we post. Do not post everyt
 11. Weekly review (Monday runs only): pull last week's results with Metricool `getAnalyticsDataByMetrics` per network (views, reach, engagement for Reels/TikToks) and compare by time slot, clip length, topic and funny vs not funny (pull shares where the network reports them). Put the findings in the Monday notification and, if a pattern is clear for two weeks running, propose (do not make) a change to the daily mix.
 
 ## Rules
+- Never overwrite, move or re-time a post that is already scheduled in Metricool. Only add new posts (the caption-less placeholder fallback is the only exception).
 - Never post anything with a Context risk note, anything that is only someone else's audio with no host reaction, anything with profanity, or anything mentioning Seald or its investors.
 - If a step fails (OpusClip down, Metricool error), schedule what you can, then report what was skipped. Do not retry a failed Metricool call more than once.
 - End each run with a short summary: posts scheduled per network, any gaps, any errors.
