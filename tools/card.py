@@ -13,7 +13,67 @@ def wrap(d,txt,font,maxw):
         if d.textlength(t,font=font)<=maxw: cur=t
         else: lines.append(cur);cur=w
     lines.append(cur);return lines
-def card(quote,speaker,out):
+A=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),"assets")
+STYLES=["classic","eagle","hosts","emblem"]
+def _asset(n): return Image.open(os.path.join(A,n))
+def _fit(im,w,h,cx=0.5,cy=0.5):
+    """Cover-crop im to w x h around the (cx,cy) fraction point."""
+    s=max(w/im.width,h/im.height);im=im.resize((int(im.width*s+1),int(im.height*s+1)),Image.LANCZOS)
+    x=int(min(max(im.width*cx-w/2,0),im.width-w));y=int(min(max(im.height*cy-h/2,0),im.height-h))
+    return im.crop((x,y,x+w,y+h))
+def _mono(width):
+    m=_asset("monogram_white_gold.png").convert("RGBA");m=m.crop(m.getbbox())
+    return m.resize((width,int(m.height*width/m.width)),Image.LANCZOS)
+def pick_style(quote):
+    """Deterministic rotation so the feed mixes looks without repeating the same quote's style."""
+    import hashlib
+    return STYLES[int(hashlib.md5(quote.encode()).hexdigest(),16)%len(STYLES)]
+def _text_block(d,quote,speaker,top,height,center=False):
+    maxw=W-160
+    for size in range(84,38,-2):
+        f=ImageFont.truetype(F+"InterDisplay-ExtraBold.otf",size)
+        lines=wrap(d,quote,f,maxw);lh=int(size*1.22)
+        if lh*len(lines)<=height: break
+    y=top+(height-lh*len(lines))//2
+    for l in lines:
+        x=(W-d.textlength(l,font=f))//2 if center else 80
+        d.text((x,y),l,font=f,fill=WHITE);y+=lh
+    if speaker and speaker!="unclear":
+        sf=ImageFont.truetype(F+"InterDisplay-SemiBold.otf",40);t=speaker.upper()
+        x=(W-d.textlength(t,font=sf))//2 if center else 80
+        d.text((x,y+30),t,font=sf,fill=GOLD)
+def _footer(im,d,mono=False):
+    lg=_mono(230) if mono else logo
+    im.paste(lg,(80,H-90-lg.height),lg)
+    hf=ImageFont.truetype(F+"InterDisplay-Medium.otf",32)
+    h="@GoodMorningLiberty";d.text((W-80-d.textlength(h,font=hf),H-90-30),h,font=hf,fill=(170,170,170))
+def card(quote,speaker,out,style=None):
+    """style: classic, eagle, hosts, emblem, or None to rotate by quote."""
+    style=style or pick_style(quote)
+    if style=="eagle":
+        bg=_fit(_asset("eagle_background.jpg").convert("RGB"),W,H,0.5,0.5)
+        im=Image.blend(bg,Image.new("RGB",(W,H),BG),0.15);d=ImageDraw.Draw(im)
+        d.rectangle([0,0,W,14],fill=GOLD)
+        ov=Image.new("RGBA",(W,H),(0,0,0,0));od=ImageDraw.Draw(ov);od.rectangle([50,300,W-50,1010],fill=(0,0,0,120))
+        im=Image.alpha_composite(im.convert("RGBA"),ov).convert("RGB");d=ImageDraw.Draw(im)
+        _text_block(d,quote,speaker,330,600,center=True);_footer(im,d,mono=True);im.save(out,quality=95);return out
+    if style=="hosts":
+        im=Image.new("RGB",(W,H),BG);d=ImageDraw.Draw(im)
+        top=_fit(_asset("hosts_thumbnail.jpg").convert("RGB").crop((0,0,2576,860)),W,520,0.5,0.45)
+        im.paste(top,(0,0))
+        g=Image.new("L",(1,200));[g.putpixel((0,i),int(255*i/199)) for i in range(200)]
+        im.paste(Image.new("RGB",(W,200),BG),(0,320),g.resize((W,200)))
+        d.rectangle([0,520,W,534],fill=GOLD)
+        _text_block(d,quote,speaker,580,520);_footer(im,d,mono=True);im.save(out,quality=95);return out
+    if style=="emblem":
+        im=Image.new("RGB",(W,H),BG);d=ImageDraw.Draw(im)
+        e=_asset("emblem_gold.png").convert("RGB").resize((300,300),Image.LANCZOS)
+        mk=Image.new("L",(300,300),0);ImageDraw.Draw(mk).ellipse([4,4,296,296],fill=255)
+        im.paste(e,((W-300)//2,90),mk)
+        _text_block(d,quote,speaker,440,620,center=True)
+        hf=ImageFont.truetype(F+"InterDisplay-Medium.otf",32);h="@GoodMorningLiberty"
+        d.text(((W-d.textlength(h,font=hf))//2,H-110),h,font=hf,fill=(170,170,170))
+        d.rectangle([0,H-14,W,H],fill=GOLD);im.save(out,quality=95);return out
     im=Image.new("RGB",(W,H),BG);d=ImageDraw.Draw(im)
     d.rectangle([0,0,W,14],fill=GOLD)
     qm=ImageFont.truetype(F+"InterDisplay-Black.otf",260)
@@ -31,7 +91,7 @@ def card(quote,speaker,out):
     im.paste(logo,(80,H-90-logo.height),logo)
     hf=ImageFont.truetype(F+"InterDisplay-Medium.otf",32)
     h="@GoodMorningLiberty";d.text((W-80-d.textlength(h,font=hf),H-90-30),h,font=hf,fill=(170,170,170))
-    im.save(out,quality=95)
+    im.save(out,quality=95);return out
 if __name__=="__main__":
     for i,(q,s,o) in enumerate(json.load(open(sys.argv[1]))): card(q,s,o)
 
@@ -65,10 +125,12 @@ def end_slide(out):
     im.paste(logo,(80,H-90-logo.height),logo)
     im.save(out,quality=95)
 
-def carousel(title, quotes, out_prefix):
-    """quotes: list of (quote, speaker). Writes cover, quote slides, end slide. Returns paths in order."""
+def carousel(title, quotes, out_prefix, style=None):
+    """quotes: list of (quote, speaker). Writes cover, quote slides, end slide. Returns paths in order.
+    All quote slides share one style (rotates by title when style is None)."""
+    style=style or pick_style(title)
     paths=[f"{out_prefix}_0.jpg"];cover(title,paths[0])
     for i,(q,s) in enumerate(quotes,1):
-        p=f"{out_prefix}_{i}.jpg";card(q,s,p);paths.append(p)
+        p=f"{out_prefix}_{i}.jpg";card(q,s,p,style);paths.append(p)
     p=f"{out_prefix}_{len(quotes)+1}.jpg";end_slide(p);paths.append(p)
     return paths
