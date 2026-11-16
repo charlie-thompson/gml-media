@@ -52,3 +52,19 @@ P3111602YhFw VInt7xCbDB  # hook opens mid-sentence (Stanley cup reference)
 P3111602YrB5 xma11T2B82  # hook opens 'Was it such a success?' (no context)
 P3111602i3hJ ovleU4VRJx  # hook opens 'it just made me think of that conversation'
 P3111602ZMyN 7xMjQ8cYOm  # score 76
+P31112060C4C Y4YScsDjAA  # duplicate of SYXzKcLQkA (same healthcare moment)
+P3111205TlfS WPdoFde7oS  # duplicate of SYXzKcLQkA, opens 'Number 4'
+P3101916ZreX GsWuipxncw  # hook opens reading a tweet ('This one says')
+P3101916ZreX LTM1NrgIXP  # hook opens 'this one says uh'
+P3101916ZreX 4SyzgIc610  # 'whores' in first line; off-brand gym banter
+P3101916ZreX ssyaMPdYs5  # N-word / racist incident story
+P3101916ZreX I7YG209tgO  # school shooting reference
+P3101916ZreX Bdba9hvlcl  # Metallica concert, off-topic
+P3101916ZreX YrUJL1DW34  # timely (Oct), expired
+P3101916ZreX WQOOayGMMQ  # timely Tucker ratings (Oct), expired
+P3101916ZreX wTQxsdttvH  # timely Tucker ratings (Oct), expired
+P3101916ZreX SUWRGj7Bt9  # timely Mike Johnson war powers (Oct), expired
+P3101916ZreX Ylv3e6lZSZ  # timely Hormuz tankers (Oct), expired
+P3111210TKRX 06YpHtTAuM  # timely Hegseth impeachment, expired
+P3111210T9Ld 8fFfwVSoM6  # Susie Wiles lobbying ties: timely, accusations against named people
+P3111210T9Ld kl7UsA45a8  # 'pissed off'; guest-led glyphosate/cancer claims
