@@ -28,6 +28,7 @@ Opus makes 25 to 35 clips per episode, far more than we post. Do not post everyt
 - Each night, after reviewing new episodes, append every eligible clip not used tomorrow to the queue (with kind, useBy and checked) and remove rows that were used or have passed their useBy date.
 
 ## Steps
+0. Work out "tomorrow" in Chicago time, never UTC: `TZ=America/Chicago date -d tomorrow +%F`. The run fires around 9pm Chicago, when UTC is already the next day. (On Nov 15 the run used the UTC date and scheduled Nov 17, leaving Nov 16 empty.) The weekly review also goes by the Chicago weekday.
 1. Check Metricool `getScheduledPosts` for tomorrow. If tomorrow already has posts, only fill missing slots.
 1b. Fresh episodes first. List OpusClip projects (`opusclip_list_projects`) and find any created since the last run that are new GML episodes (OpusClip Auto Import creates these from new YouTube uploads). For each new episode:
    - Review all of its clips against the queue rules above. Use its best eligible clips for at least half of tomorrow's clip slots (fresh content beats the archive) and queue the rest.
