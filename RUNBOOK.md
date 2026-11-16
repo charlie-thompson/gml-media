@@ -35,7 +35,7 @@ Fallback: a caption-less Metricool post whose media URL contains `/planner/googl
 
 Nate's clips skip the score, length, hook and layout checks (he made them by hand). The hard Rules at the bottom still apply.
 
-Known gaps (Nov 16): the Descript connector's publish list missed Short 02 for at least an hour after Nate published it, so check publishes from the last 14 days every night rather than only new ones. If WebFetch cannot read a share page, say so in the notification with the share URL.
+Publish lag (checked Nov 16): a new publish only shows in `get_project` after Descript finishes processing it (Short 02 was published 10:20am and showed up by 11:27am). Keep checking the last 14 days every night so a late one is caught the next night. If WebFetch cannot read a share page, say so in the notification with the share URL.
 
 ## Clip queue and quality bar
 Opus makes 25 to 35 clips per episode, far more than we post. Do not post everything; keep a queue in `state/clip_queue.tsv` and post the best of it.
