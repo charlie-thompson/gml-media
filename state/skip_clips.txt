@@ -75,3 +75,18 @@ P3111701CWr4 7zEBdGIjwW  # duplicate of W7Encd6LPa moment; stutter hook; ends mi
 P3111701CWr4 3VO9bBE5NJ  # hook opens mid-sentence 'much so they're pr-'
 P3101916ZreX sV9cEGQk9u  # ends on landlords burning down buildings; hook opens on critics' argument
 P3111210T9Ld kl7UsA45a8  # contains 'pissed off' (profanity rule)
+P3111602htWO 8zTw4WWE7G  # score 79 (all clips in this project under 85)
+P3111802eseM cE9ht31h14  # score 72 (rank 37 rent control cut; all clips under 85)
+P3111802elWM CYczKPesbC  # hook opens mid-thought 'if we got into China'
+P3111802elWM bpFc18erRa  # 30s, too short
+P3111802f5YL SBYLbP3FMP  # hook opens 'they tell you' (no context); 9/11 attack framing
+P3111802f5YL vS6WpsOlms  # off-target (balloons/Ted Lasso), weak
+P3111802fEBo y1S1reh6hK  # hook opens mid-math; host flubs the math; 'Oh my God'
+P3111802fLd4 9N1L8UHrEF  # hook is setup; 'you suck at hunting' repeated
+P3111802ffSH bxa9KU6aaC  # 17s, too short
+P3111802fo2V ZqY4V6xjsE  # hook '60 to 64 is more expensive...' needs context
+P3111802ebCz qWRkR3Y5qL  # hook opens on app test; 'oh God', 'screwing over'
+P3111802rfja L0G7suqxq3  # hook opens mid-sentence 'the problem is that we're forcing people to'
+P3111802ruzO j8lIHEpAUK  # hook opens 'It's getting caught in lying' (no context)
+P3111802s6it yn7qfzsToN  # profanity ('shit')
+P3111802sEy7 HIfSIXw2HA  # score 76 (rank 156 AI cut; all clips under 85)
