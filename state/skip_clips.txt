@@ -90,3 +90,13 @@ P3111802rfja L0G7suqxq3  # hook opens mid-sentence 'the problem is that we're fo
 P3111802ruzO j8lIHEpAUK  # hook opens 'It's getting caught in lying' (no context)
 P3111802s6it yn7qfzsToN  # profanity ('shit')
 P3111802sEy7 HIfSIXw2HA  # score 76 (rank 156 AI cut; all clips under 85)
+P3111901CMhe N5ZX318HoN  # 'bombed the hell out of them' (profanity)
+P3111901CMhe A3nlpSJgmC  # 'bomb the hell out of them' (profanity)
+P3111901CMhe EJbMyBEBYT  # hook opens reading Seth Dillon's quote ('Seth Dillon says')
+P3111901CMhe wqkrRBcisZ  # hook opens mid-sentence 'tell you'; mostly guest answer
+P3111902ehdn BI5uhOlt3i  # hook opens mid-thought 'think about the alternative'; 'screwed up'
+P3111902fCTd pf4QMURNWI  # duplicate of YmfP4FMHd2 (same AI moment)
+P3111902fRs7 SmRc4ls6Wk  # hook opens 'it's not as exciting as the J6 pipe bomber / who killed Charlie Kirk'
+P3111902fpk6 o41ruYC4Ij  # hook opens 'what I wanna circle back to'; ends on segue
+P3111902fgBG m6OL4Uk91M  # 35s, too short
+P3111902fgBG 5e2Y2DjPVm  # 43s, too short
