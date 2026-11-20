@@ -100,3 +100,20 @@ P3111902fRs7 SmRc4ls6Wk  # hook opens 'it's not as exciting as the J6 pipe bombe
 P3111902fpk6 o41ruYC4Ij  # hook opens 'what I wanna circle back to'; ends on segue
 P3111902fgBG m6OL4Uk91M  # 35s, too short
 P3111902fgBG 5e2Y2DjPVm  # 43s, too short
+P3111602i3hJ ovleU4VRJx  # hook opens 'it just made me think of that conversation we used to have about roads'
+P3112002fY26 af9whVeYGe  # 42s, too short
+P3112002fY26 4zXVZXb5Ck  # hook opens 'heck even if you take the data centers' (setup)
+P3112002fHME l6IipM3ZXU  # hook opens 'When it comes to this war and the ou- where we are right now' (setup, stumble)
+P3112002f1r9 zsCjJdABNR  # 29s, too short
+P3112002f1r9 G0Di1LPrME  # 16s, too short
+P3112002f9tp YFNibU4khM  # 37s, too short
+P3112002f9tp IFHkqclAyT  # hook opens mid-thought 'There's probably gonna be a lot of other Because'
+P3112002fOTx AgyP8GsefS  # hook opens 'eventually it's gonna be so much' (mid-thought), rambles
+P3112002fOTx Ra9KEAJRCw  # hook opens 'That's great it can get there' (no context)
+P3112002rD1S q92frzmySV  # hook opens 'now the question is like well since they' (setup)
+P3112002rD1S oQwFGLGenm  # 18s, too short
+P3112002rNZf udvwUplJzB  # hook opens 'this always gets all the socialists out' (no-context reference); reads tweets
+P3112002rNZf 8A153wMEm6  # 20s, too short
+P3112002qtGC G9y2uut7XX  # hook opens 'the craziest thing about that example' (no-context reference)
+P3112002qtGC Nnid0M4QGE  # 18s, too short
+P3112002r4an pCiYYD6Pze  # 22s, too short
