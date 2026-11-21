@@ -2,4 +2,4 @@
 # projectId	clipId	score	durSec	kind	useBy	checked	notes
 # kind: timely (use within 3 days of the episode) or evergreen (good for ~6 weeks).
 # checked: yes = transcript reviewed (host's own take, clean); no = run must read the transcript before using it.
-# PENDING: P3112002qmPJ (bank rank 170, healthcare 'commies call it capitalism') was still processing at end of 2026-11-20 run; review its clips next run (checked no).
+# 2026-11-21: no eligible unused clips left. P3112002qmPJ reviewed (both skipped). Bank ranks 48, 62, 73, 92 were cut on 11-21 and produced no usable clip (hooks/score); don't re-cut them.

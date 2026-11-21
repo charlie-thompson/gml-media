@@ -117,3 +117,29 @@ P3112002rNZf 8A153wMEm6  # 20s, too short
 P3112002qtGC G9y2uut7XX  # hook opens 'the craziest thing about that example' (no-context reference)
 P3112002qtGC Nnid0M4QGE  # 18s, too short
 P3112002r4an pCiYYD6Pze  # 22s, too short
+P3112101RxyV BxGueHfiqc  # hook opens on politician's audio mid-sentence ('Every American family a $1,700 check')
+P3112101RxyV d6IeMIFcr8  # hook opens 'first little bit it's gonna look like it works' (no context)
+P3112101RxyV ct9ccTYSWF  # hook opens 'the study it was a 50-year study' (setup)
+P3112101RxyV dlljykbFI9  # profanity ('f- screw you')
+P3112101RxyV sD7sJFqMru  # only Cato video audio, no host reaction
+P3112101RxyV gmGihheH04  # hook opens 'The middle class is taxed very heavily in those countries' (no-context reference); 'Holy crap'
+P3112101RxyV ratb1YDnpd  # hook opens 'The thing about the way those countries do it' (no context)
+P3112101RxyV Ho7T4bUzo1  # only someone else's audio (measles clip), no host reaction
+P3112101RxyV ypTOdB7Ogx  # hook opens on someone else's audio (measles clip)
+P3112101RxyV FmbPcZkduX  # profanity ('bullshit')
+P3112101RxyV feVOTs6WQU  # hook reads a tweet; 'you idiot'
+P3112101RxyV 62EuoqLyLF  # hook opens on someone else's audio mid-sentence
+P3112101RxyV pxZQa9ADZp  # hook opens 'how about another one here from JAMA' (setup)
+P3112101RxyV pGTtNUaMvl  # hook opens mid-sentence 'you're actually gonna create'
+P3112101RxyV c6BBlhOVD4  # hook opens 'we got a better one here' (setup)
+P3112101RxyV 07oIKVtLzD  # mostly Mamdani audio, hook mid-question
+P3112101RxyV 4Q4i2vg5yv  # hook opens mid-sentence 'were Bernie Sanders and'
+P3112002qmPJ AY3Ndofrtl  # hook opens 'to kick off our commie block' (setup); 'shut the hell up'
+P3112002qmPJ 2zYE3aap3U  # 16s, too short
+P3111802ebCz qWRkR3Y5qL  # hook opens 'I'm not sure what 25 million divided by' (setup); 'screwing'
+P3111802f5YL SBYLbP3FMP  # hook opens mid-quote 'they tell you'
+P3111802fEBo y1S1reh6hK  # hook opens 'That's let's see' (setup)
+P3112102er4v D8PAwab7oK  # hook opens 'I said that like one of the worst things' (setup)
+P3112102edEZ AORcEMlxoG  # hook opens 'As a more simple example' (setup)
+P3112102ekpN o0SPr2Astj  # hook opens mid-sentence 'you try to take that away'
+P3112102eNv2 JoYbTku4xw  # score 76 (rank 48 cut; all clips under 85)

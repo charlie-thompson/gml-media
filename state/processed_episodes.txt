@@ -6,3 +6,4 @@ P3111210T9Ld 2026-11-13  # Calley Means on Joe Rogan (reviewed, not used: largel
 P3111322CNQX 2026-11-14  # Medicare for All Is Capitalism Now? (Dumb Bleep; used 4 clips, 3 bank rows 2631-2633)
 P3111701CWr4 2026-11-17  # SpaceX vs NASA (1854). Used 1 clip (U2llgjwqOf); 6 others skipped (hooks/profanity); rest under 85 or under 45s
 P3111901CMhe 2026-11-19  # War Hawks / JD Vance (1855). No eligible clips: 4 at 85+ and 45s+ all failed (profanity 'hell', quoted-tweet hook, mid-sentence hook); rest under 85 or under 45s
+P3112101RxyV 2026-11-21  # Mamdani, Bernie and a $1,700 War Refund (Dumbest Takes). Used 3 clips (ci4IpZdD8m, md7jz2xIAr, RUPqEfHfMG); 1 bank row added (2635); rest failed hooks/profanity/other-audio or under 85/45s
