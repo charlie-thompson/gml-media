@@ -3,3 +3,4 @@
 # kind: timely (use within 3 days of the episode) or evergreen (good for ~6 weeks).
 # checked: yes = transcript reviewed (host's own take, clean); no = run must read the transcript before using it.
 # 2026-11-21: no eligible unused clips left. P3112002qmPJ reviewed (both skipped). Bank ranks 48, 62, 73, 92 were cut on 11-21 and produced no usable clip (hooks/score); don't re-cut them.
+# 2026-11-22: no eligible unused clips left. Bank ranks 131,152,155,172,188,203,204,205,225,227,239,241,245,247,248,249,252,254,255,154 cut on 11-22; used 155,172,241,247,249; the rest failed hooks/profanity/endings/score (see skip_clips). Don't re-cut them.

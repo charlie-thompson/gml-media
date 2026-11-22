@@ -143,3 +143,25 @@ P3112102er4v D8PAwab7oK  # hook opens 'I said that like one of the worst things'
 P3112102edEZ AORcEMlxoG  # hook opens 'As a more simple example' (setup)
 P3112102ekpN o0SPr2Astj  # hook opens mid-sentence 'you try to take that away'
 P3112102eNv2 JoYbTku4xw  # score 76 (rank 48 cut; all clips under 85)
+P3112202eA83 cmPelAkfD6  # hook opens 'He says' (reading a quote, no context) (rank 131)
+P3112202eLkY fIKDHiHsCl  # hook opens mid-sentence 'That's an incentive for' (rank 152)
+P3112202eVng DFVb9nCWHA  # duplicate of fdctXtQPTh (shorter cut, 85)
+P3112202eXCN PFmL8HPdUO  # 21s, under 45
+P3112202eecm tN9sjlv0SZ  # profanity 'Damn it Biden'; stuttered setup hook (rank 188)
+P3112202ek5Z B7XsrRhQEG  # hook opens 'he's right about it' (reference, no context) (rank 203)
+P3112202er6R FPAFcv8mCL  # hook opens mid-thought, 15s+ setup (rank 205)
+P3112202fCk9 ywxvZgdNd0  # hook 'Instead of 200 300% more' no context; trails off on garage (rank 227)
+P3112202fCk9 wDmj499zcu  # duplicate/85 of rank 227 cut
+P3112202fIjx fOEUjqmUzG  # score 77 (rank 239 cut; all under 85)
+P3112202t9w8 qnjFW74bgQ  # hook 'they see Musk' (reference); wind-down ending (rank 248)
+P3112202tALZ dbGEV2HOHE  # score 72 (rank 252 cut; all under 85)
+P3112202tnNm r69WKqvOeT  # profanity 'damn evil capitalists' (rank 204)
+P3112202toVX Dpft2v59Di  # hook reads a commenter; quoted 'F right off'; trails off (rank 245)
+P3112202tpXp rRhpTKvoKn  # profanity 'asshole'; hook reads text (rank 254)
+P3112202tqet OvXJ5tgYLM  # wind-down ending 'I don't know how I feel about AI' (rank 255)
+P31122034eXn MCJ3tTYih5  # hook opens 'I don't know if you meant it this way but like' (setup) (rank 154)
+P31122034eXn vogSsdeion  # 29s, under 45
+P31122034hEp cNlwKpAtnq  # score 71 (rank 225 cut; all under 85)
+P3112202eecm 5D8neQroDT  # 24s, under 45
+P3112202f3xB XSoMHyVfAA  # 15s, under 45
+P3112202tnNm 8TkkqIobQe  # 17s, under 45
