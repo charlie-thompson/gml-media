@@ -177,3 +177,14 @@ P3112302fEZo U8dZ6BuFsC  # score 71 (rank 275 cut; all under 85)
 P3112302fO9V 3LQLhUh6Bu  # score 71 (rank 278 cut; all under 85)
 P3112302mNvv 6a2ZCY3CW6  # score 74 (rank 284 cut; all under 85)
 P3112302mRva LXWVRdNIUp  # hook is repeated numbers, rambles; 'libertarian autism' joke; trails off (rank 230)
+P3112322Bm90 KGGTP9UKtz  # bleeped profanity 'freaking bleep show' in opening
+P3112322Bm90 5q2mW7o05q  # second half is El-Sayed (guest audio) with no host reaction, ends on guest
+P3112322Bm90 w9ewhl5o3J  # duplicate sub-cut of hDi4NeGXz7 (car payment vs healthcare)
+P3112322Bm90 M5Cdp6lMkw  # original 71s; trimmed copy zY80UcuV0JOh used instead
+P3112322Bm90 tiM1HDE2Dd  # original 67s; trimmed copy DedKU118AeoK used instead
+P3112322Bm90 tTKP9v5qm1  # original 63s; trimmed copy R78Gj6zXshU9 used instead
+P3112302mPbU RsdRfBgRfy  # rank 229: opens on question setup, payoff at ~45s (front-load fail)
+P3112302mPbU KhrZV9MYmb  # rank 229: opens 'I'm what we've said in the tariff conversation' (setup)
+P3112402fDG1 yfVykSkuqX  # rank 364: opens on setup question 'Who is that person the right can rally behind', payoff at end
+P3112402f7tp EbSyX53QAX  # rank 372: ~5s of 'do you think there's a wealth gap / well there is' setup before the claim; trim failed (OpusClip range error); trails off on Walmart
+P3112402fLZr qqJj0pSvKG  # rank 312 cut: all clips under 85
