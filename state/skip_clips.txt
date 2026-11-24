@@ -188,3 +188,4 @@ P3112302mPbU KhrZV9MYmb  # rank 229: opens 'I'm what we've said in the tariff co
 P3112402fDG1 yfVykSkuqX  # rank 364: opens on setup question 'Who is that person the right can rally behind', payoff at end
 P3112402f7tp EbSyX53QAX  # rank 372: ~5s of 'do you think there's a wealth gap / well there is' setup before the claim; trim failed (OpusClip range error); trails off on Walmart
 P3112402fLZr qqJj0pSvKG  # rank 312 cut: all clips under 85
+P3112402lKRO WePNkCVY8u  # remix alt: opens mid-thought 'it's on you to vote for someone else'; hook line at ~20s
