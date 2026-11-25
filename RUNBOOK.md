@@ -57,6 +57,16 @@ Opus makes 25 to 35 clips per episode, far more than we post. Do not post everyt
 - Layout: the run cannot see video layout. Opus's brand kit is set to Split and Fit for 9:16 (Fill removed) so clips should not crop to one host. If Charlie flags a clip's layout, add it to `state/skip_clips.txt`.
 - Each night, after reviewing new episodes, append every eligible clip not used tomorrow to the queue (with kind, useBy and checked) and remove rows that were used or have passed their useBy date.
 
+## YouTube link posts on Facebook (added Nov 25)
+Every YouTube video gets one Facebook post: thumbnail + title, with the link in the first comment. Do this AFTER the rest of tomorrow is scheduled. These are extra posts on top of the daily mix.
+- Backlog: `state/yt_facebook_queue.txt` has two video IDs per date (first = AM, second = PM), ranked by YouTube views, through 2027-06-26. Duplicates and other people's reuploads are already removed. Post tomorrow's line.
+- New uploads: also post each YouTube video published yesterday or today (Chicago) that is not in the queue and not in `state/yt_facebook_posted.txt`.
+- Title: Metricool `getAnalyticsDataByMetrics`, metrics `YTVV17` (title) and `YTVV05` (url); any date range returns the whole catalog. Match on the ID. Missing ID (deleted or private) = skip.
+- Format: Facebook POST, autoPublish true. `media` = `https://i.ytimg.com/vi/<ID>/maxresdefault.jpg` (if rejected, retry once with `hqdefault.jpg`). `text` = the YouTube title as published, a blank line, then `Read the first comment 👇`. No hashtags, no question, no link in the text. `firstCommentText` = `Watch on YouTube: https://www.youtube.com/watch?v=<ID>`. No Story.
+- Times: AM 10:00, PM 20:00, new uploads 14:00. If that lands within 60 minutes of another Facebook post (Stories don't count), use the nearest open time between 08:00 and 21:30.
+- Never post the same video twice: skip any ID already in `state/yt_facebook_posted.txt` or already in a scheduled Facebook post's first comment. Log each one as `<ID> <date>` in `state/yt_facebook_posted.txt`.
+- The 5a/9b caption rules (question, hashtags, "Our take" comment) do not apply to these posts.
+
 ## Steps
 0. Work out "tomorrow" in Chicago time, never UTC: `TZ=America/Chicago date -d tomorrow +%F`. The run fires around 9pm Chicago, when UTC is already the next day. (On Nov 15 the run used the UTC date and scheduled Nov 17, leaving Nov 16 empty.) The weekly review also goes by the Chicago weekday.
 1. Check Metricool `getScheduledPosts` for tomorrow. Anything already scheduled stays exactly as it is: never update, move, re-time or replace an existing post (Charlie or an earlier session may have placed it on purpose). Build tomorrow around it: count existing clips, cards and Nate clips toward the daily mix, skip any slot within 60 minutes of an existing post on the same network, and only add what is missing. The one exception is a caption-less Metricool placeholder (see Nate's clips fallback).
@@ -94,6 +104,7 @@ Opus makes 25 to 35 clips per episode, far more than we post. Do not post everyt
 11. Weekly review (Monday runs only): pull last week's results with Metricool `getAnalyticsDataByMetrics` per network. Lead with the three numbers that matter (MrBeast formula, added Nov 21): click/stop rate (views vs impressions or reach), average watch time, and average percent watched, for every Reel and TikTok, wherever Metricool reports them; then views, reach, shares and engagement. Compare by time slot, clip length, topic, hook type (first line) and funny vs not funny. Name the 3 best and 3 worst clips by percent watched and what their first line and ending had in common. Put the findings in the Monday notification and, if a pattern is clear for two weeks running, propose (do not make) a change to the daily mix.
 
 ## Rules
+- Links on Facebook (added Nov 25): never put a link in a Facebook post's text. The text says "Read the first comment 👇" and the link goes in `firstCommentText`. On Instagram and TikTok, where comment links aren't clickable, say "link in bio" instead.
 - Never overwrite, move or re-time a post that is already scheduled in Metricool. Only add new posts (the caption-less placeholder fallback is the only exception).
 - Never post anything with a Context risk note, anything that is only someone else's audio with no host reaction, anything with profanity, or anything mentioning Seald or its investors.
 - If a step fails (OpusClip down, Metricool error), schedule what you can, then report what was skipped. Do not retry a failed Metricool call more than once.
