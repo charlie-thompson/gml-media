@@ -189,3 +189,24 @@ P3112402fDG1 yfVykSkuqX  # rank 364: opens on setup question 'Who is that person
 P3112402f7tp EbSyX53QAX  # rank 372: ~5s of 'do you think there's a wealth gap / well there is' setup before the claim; trim failed (OpusClip range error); trails off on Walmart
 P3112402fLZr qqJj0pSvKG  # rank 312 cut: all clips under 85
 P3112402lKRO WePNkCVY8u  # remix alt: opens mid-thought 'it's on you to vote for someone else'; hook line at ~20s
+P3112502eIFj IPuMy5hB3J  # rank 270: opens on sarcastic setup 'Congress just declared war on this country, okay'; trails off on 'genius of the founders'
+P3112502eIFj 8p5bO9HMo4  # rank 270: 24s, too short
+P3112502ePif E91fvlhVF9  # rank 272: dup moment of BO9IqYs50l
+P3112502eAbv C91FWHKAca  # rank 289: opens 'It's already happened with the Falcon 9' (reference); payoff ~10s in, trim would leave <45s
+P3112502eAbv 5pIWwtJiXX  # rank 289: 16s
+P3112502eBAu sQcZ4kccX5  # rank 324: core claim lands at the end (front-load fail)
+P3112502eBAu VOQAPtAikW  # rank 324: 24s
+P3112502eRGW lwDInoSdQw  # rank 315: opens 'try to meet them where they are' (setup); payoff at end
+P3112502eRGW TEOGjvwaLc  # rank 315: 32s
+P3112502ewt9 ZiCJKhSZnD  # rank 319: 85, hook score 2, opens on outsourcing setup
+P3112502sUS9 88XEk9VxTe  # rank 226: score 72
+P3112502sUS9 n9Y6La2Sm8  # rank 226: score 70
+P3112502sUS9 2vy40XpZd4  # rank 226: score 60, 24s
+P3112502drfp OJ4BCAd4rg  # rank 277: opens on setup ('I've gone through a lot of feelings discussions'); mentions host's child's diagnosis
+P3112502drfp icWpIgV0No  # rank 277: 16s
+P3112502xcd5 z88PkcODbJ  # rank 297: opens 'We all remember when Biden was in office' (setup); claim lands ~30s
+P3112502xcd5 JPAptvXIiZ  # rank 297: 29s
+P3112502xelz Lre1zXDzvb  # rank 256: opens 'Now if you're talking about like a water supply' (setup); punchline ~25s
+P3112502xelz 0yzhnmdA0J  # rank 256: 21s
+P3112502xfru tVbQE5bteR  # rank 219: 16s, COVID
+P3112302eKnJ MwE0XkJ4Rf  # original of Q60uDgpG8OwI (used trimmed copy 2026-11-25)
