@@ -31,7 +31,9 @@ Steps:
 6. If more Nate clips are waiting than tomorrow's best hours hold, carry the extras to the next day's best hours. Timely ones go first.
 7. Log each one in `state/nate_clips.txt` as `<share URL> <date> <networks>  # <clip name>`. Never post a Nate clip on the same network twice. List Nate clips first in the notification, and list any that were skipped (wide, unreadable, broke a rule) with the reason.
 
-Fallback: a caption-less Metricool post whose media URL contains `/planner/google-drive/` is also a Nate clip (Charlie did this once on Nov 16). Treat it the same way and turn the placeholder into one of the real posts with `updateScheduledPost`, since Metricool's API cannot delete posts.
+Fallback: a caption-less Metricool post whose media URL contains `/planner/google-drive/` is also a Nate clip (Charlie did this on Nov 16 and Nov 24). Treat it the same way and turn the placeholder into one of the real posts with `updateScheduledPost`, since Metricool's API cannot delete posts.
+- Placeholder dates (Charlie, Nov 25): the date and time Charlie parks a placeholder on is NOT where he wants it. Every night, run `getScheduledPosts` from tomorrow through 30 days out and look for caption-less `/planner/google-drive/` posts on ANY date. Move each one to the next open day (tomorrow if tomorrow still has room, otherwise the first day after with open best hours), re-timed into that day's best Facebook hour with `updateScheduledPost`, then add its captions, FB Story, IG Reel + Story and TikTok there like any Nate clip. Never leave one on the day he parked it.
+- Placeholder videos can't be WebFetched; get the transcript and length with Descript `transcribe_audio_video` using the static.metricool.com URL. A placeholder whose length matches one of Nate's Descript publishes is that publish: log both URLs in `state/nate_clips.txt`.
 
 Nate's clips skip the score, length, hook and layout checks (he made them by hand). The hard Rules at the bottom still apply.
 
