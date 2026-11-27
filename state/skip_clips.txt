@@ -222,3 +222,38 @@ P3112522Bk3w RW5BDimDfN  # Ron Paul: opens mid-sentence
 P3112602eJ5x upZ2B4C13b  # rank 73: 73, 30s
 P3112602eJ5x L4ylcQNswz  # rank 73: 70, 22s
 P3112602eJ5x Ghn8SFyf8I  # rank 73: 60, 24s
+P3112702e4rJ 5ZNXYi7zDw  # rank 30: dup of oYWX0ig31m (same CEO math moment), 85, opens on 'not sure what 25 million divided by...'
+P3112702eF3b FoB9tUR9C1  # rank 121: 75, 35s
+P3112702eF3b qPOg7hiQJR  # rank 121: 70, 18s
+P3112702eF3b nkCijXCoUP  # rank 121: 60, 18s
+P3112702eM23 ogFLCv2VRz  # rank 141: 85, 24s
+P3112702eToe 6WTyW2gPoK  # rank 147: opens on setup ('When it comes to this war...'); trimmed to hook would be ~41s
+P3112702eToe ALRp5qReJq  # rank 147: 30s, Iran blockade
+P3112702eaad ekZV76F19K  # rank 250: 39s (silencer paperwork)
+P3112702eaad Ol3SzMz9VI  # rank 250: 26s
+P3112702fA5g wE3Pg5VKnX  # rank 123: opens rambling about Flock investigation; hook line ~20s in
+P3112702fA5g 9JDr1sMTEj  # rank 123: 16s
+P3112702fKST N9YHL1PmD7  # rank 134: opens mid-sentence ('that country some country...')
+P3112702fKST cyh6RcplMu  # rank 134: 21s
+P3112702fQvt 1fdgOfWm4P  # rank 187: 31s
+P3112702fQvt xtAAiSvaxx  # rank 187: 19s
+P3112702fWqt U4pp5g8aRb  # rank 291: original of trimmed copy f7M3Bv6SnJpv
+P3112702fWqt onQ4SNEl9s  # rank 291: 24s
+P3112702ffrh 8mn8adSqVu  # rank 20: opens mid-thought ('think about the alternative...'), NY price controls
+P3112702ffrh HLx3Ms2LGX  # rank 20: 17s
+P3112702iqoE 1cZ86kmwU7  # rank 281: Outdoor Boys chat, not the take
+P3112702iqoE oi3fBtbeEz  # rank 281: Outdoor Boys chat, not the take
+P3112702m1IL GZACvehy36  # rank 296: 71
+P3112702m1IL dQqrmIxHCY  # rank 296: 70
+P3112702m1IL JSzvN080gr  # rank 296: 60, 30s
+P3112702mbwh SLuZVsHq9h  # rank 205: 25s
+P3112702ml1n NIDFRQ99EM  # rank 230: opens on setup ('I got 2 things...'), 'libertarian autism' aside
+P3112702mscU QoWhIRvT87  # rank 169: 40s
+P3112702mscU 2LUL8Ir8fI  # rank 169: 85, weak hook (3)
+P3112702n31K rtvOiFJ7M1  # rank 329: 43s
+P3112702n31K PwVZl0CcbI  # rank 329: 19s
+P3112702nDK9 3C6j2jOTba  # rank 156: 35s
+P3112702nDK9 LrnGU78JGU  # rank 156: opens garbled ('We have the threat of mutual mass destruction...')
+P3112702nN7b GaceEU1iOg  # rank 273: 15s, Ukraine news
+P3112702nTAy 6ienVUwcHR  # rank 153: opens mid-sentence ('big issue that we have is that...')
+P3112702nTAy d5ISDGGbjH  # rank 153: 33s

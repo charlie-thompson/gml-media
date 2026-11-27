@@ -1,0 +1,7 @@
+# On-screen hook banner A/B test (step 8, from 2026-11-27). One line per OpusClip clip scheduled.
+# post_date	clip_id	group	banner_text	networks	metricool_times (America/Chicago)
+2026-11-27	P3112702eM23/nXLWOsevxe	A	HISTORICALLY, THE INCENTIVE HAS BEEN WORK OR DIE	fb,tiktok,ig	FB 07:00, TT 13:30, IG 18:00
+2026-11-27	P3112702e4rJ/oYWX0ig31m	B	default	tiktok,fb,ig	TT 10:30, FB 13:00, IG 20:30
+2026-11-27	P3112702fWqt/f7M3Bv6SnJpv	A	THEY BANNED PLASTIC BAGS. PEOPLE USED MORE PLASTIC.	ig,fb,tiktok	IG 12:00, FB 16:00, TT 18:00
+2026-11-27	P3112702nN7b/AQBVCB3POn	B	default	tiktok,fb	TT 16:00, FB 19:00
+2026-11-27	P3112702mbwh/VawrUgWuvS	A	SCANDINAVIA TAXES THE MIDDLE CLASS TOO	tiktok	TT 20:00

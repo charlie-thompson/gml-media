@@ -82,3 +82,8 @@ P3112302eKnJ Q60uDgpG8OwI 2026-11-25  # gas stations make ~10 cents a gallon, go
 P3112502xd6e FxEEtS5qQk 2026-11-25  # CEO pay disparity / ratio doesn't matter (bank 211), 90, weak hook, last TT backfill (TT 16:00)
 P3112504BmyD aW4fYzX2TlpZ 2026-11-26  # M4A: "It's not actually gonna be cheaper" (trimmed copy of 7LSBdp49LK to 56s, opens on hook, cut 'no offense' aside) (FB 07:00, TT 16:00)
 P3112504BmyD RpuU3xg1iiip 2026-11-26  # M4A: "your idea is to hand it over to people who lie to you" (trimmed copy of NbBjno7M5n to 70s); 97 (IG 12:00, TT 10:30)
+P3112702eM23 nXLWOsevxe 2026-11-27  # "The incentive historically has been to work or die" (bank 141), 99, 51s, banner A (FB 07:00, TT 13:30, IG 18:00)
+P3112702e4rJ oYWX0ig31m 2026-11-27  # CEO pay split = $25/yr, a penny an hour (bank 30), 99, 56s, funny 8: live math bit, "they don't even make those anymore" (TT 10:30, FB 13:00, IG 20:30)
+P3112702fWqt f7M3Bv6SnJpv 2026-11-27  # plastic bag ban -> more plastic (trimmed copy of U4pp5g8aRb, cut 'it was just really funny' opener; bank 291), 99, 51s, funny 7: sarcasm, banner A (IG 12:00, FB 16:00, TT 18:00)
+P3112702nN7b AQBVCB3POn 2026-11-27  # "You could have just not taken $400 million out of the productive economy" (bank 273), 99, 55s, funny 6: sarcastic close (TT 16:00, FB 19:00)
+P3112702mbwh VawrUgWuvS 2026-11-27  # Scandinavia taxes the middle class too (bank 205), 99, 57s, banner A (TT 20:00)
