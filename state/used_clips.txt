@@ -87,3 +87,8 @@ P3112702e4rJ oYWX0ig31m 2026-11-27  # CEO pay split = $25/yr, a penny an hour (b
 P3112702fWqt f7M3Bv6SnJpv 2026-11-27  # plastic bag ban -> more plastic (trimmed copy of U4pp5g8aRb, cut 'it was just really funny' opener; bank 291), 99, 51s, funny 7: sarcasm, banner A (IG 12:00, FB 16:00, TT 18:00)
 P3112702nN7b AQBVCB3POn 2026-11-27  # "You could have just not taken $400 million out of the productive economy" (bank 273), 99, 55s, funny 6: sarcastic close (TT 16:00, FB 19:00)
 P3112702mbwh VawrUgWuvS 2026-11-27  # Scandinavia taxes the middle class too (bank 205), 99, 57s, banner A (TT 20:00)
+P3112802eeCK CvwUjnoJvT 2026-11-28  # "Article II does not let presidents start wars" (bank 355), 99, 47s after dropping repeated tail, banner A (FB 07:00, TT 18:00)
+P3112802dhpl OUcbnXepGk 2026-11-28  # capital gains at death / "your dad died doesn't mean you've got a million dollars" (bank 412), 99, 53s after cutting 'Th-' stutter, personal stakes (TT 08:00, IG 12:00)
+P3112802f4zA K2xTBhbAF8 2026-11-28  # companies always charged the most they could; buying power changed (bank 393), 99, 55s, banner A (TT 10:30, FB 16:00)
+P3112802eDOA OwQ3hD5v16 2026-11-28  # "you gotta have a law to prevent Standard Oil from decreasing the price by 90%" (bank 408), 85 backfill, 57s, funny 6: sarcastic close; contains 'everyone's screwed' (edit refused: clip outside source range) (FB 13:00, TT 16:00, IG 18:00)
+P3112802dskr CLLI4sce93 2026-11-28  # pay people the government says are not essential (bank 421), 99, 56s, 2025 shutdown context; banner edit refused (outside source range) so group B (TT 13:30, FB 19:00, IG 20:30)

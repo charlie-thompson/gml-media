@@ -257,3 +257,20 @@ P3112702nDK9 LrnGU78JGU  # rank 156: opens garbled ('We have the threat of mutua
 P3112702nN7b GaceEU1iOg  # rank 273: 15s, Ukraine news
 P3112702nTAy 6ienVUwcHR  # rank 153: opens mid-sentence ('big issue that we have is that...')
 P3112702nTAy d5ISDGGbjH  # rank 153: 33s
+P3112802daod WE1MNq91uX  # rank 126: 76
+P3112802daod B1twPrjaFs  # rank 126: 70, 36s
+P3112802daod HrKa2371Y7  # rank 126: 60, 23s
+P3112802dhpl AwmLfpMpKN  # rank 412: 29s
+P3112802dskr THW9ElSxeC  # rank 421: 21s
+P3112802e5xK nDvnnm67Pb  # rank 371: 41s (under 45)
+P3112802e5xK LaKJ9pAxQS  # rank 371: 19s, off topic
+P3112802eDOA eB7EgR0UtH  # rank 408: opens on setup ('there's always this story'); same moment as OwQ3hD5v16
+P3112802eXUn IKngBhgxE8  # rank 376: 79
+P3112802eXUn 8Nif3vKGSW  # rank 376: 70
+P3112802eXUn RygEqHHKiZ  # rank 376: 60
+P3112802eeCK MBRoTvf047  # rank 355: 28s
+P3112802elzL 2ophpPkllo  # rank 398: opens on setup, officer-shooting talk
+P3112802elzL vWQtV6K4Nd  # rank 398: 22s
+P3112802esvO yJv4HI3VUh  # rank 424: 35s
+P3112802esvO 9SOLTNaRcD  # rank 424: 43s
+P3112802f4zA 2cXODh2tPq  # rank 393: opens mid-thought, overlaps K2xTBhbAF8
